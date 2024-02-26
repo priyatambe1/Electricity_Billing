@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ETTKIhJTzBAL8XNRXAPdmN+4N8UGqQ0QNnyF4BhxeCo=",
+  "Source": "Electricity_Billing",
+  "BasePath": "_content/Electricity_Billing",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

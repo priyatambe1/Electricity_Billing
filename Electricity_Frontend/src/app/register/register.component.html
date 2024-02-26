@@ -1,0 +1,160 @@
+<!--Main Navigation-->
+<header>
+  <style>
+    #intro {
+      background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+      height: 115vh;
+    }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #intro {
+        margin-top: 0.2px;
+      }
+    }
+
+    /* .navbar .nav-link {
+      color: #fff !important;
+    } */
+  </style>
+
+
+
+
+  <!-- Background image -->
+  <div id="intro" class="bg-image shadow-2-strong">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-md-8">
+            <form class="bg-white rounded shadow-5-strong p-4"> <!-- Reduced padding -->
+
+
+              <form action="#" [formGroup]="registerUserData.formLoginGroup" class="signin-form">
+
+                <div class="centered-link mt-3"> <!-- Added margin top -->
+                  <p class="text-center text-muted mb-0" style="font-size: medium; color: blue;">Create An Account </p>
+                </div>
+
+                <div class="form-group">
+                  <input [(ngModel)]="registerUserData.fullname" type="fullname" class="form-control"
+                    formControlName="FullNameControl" name="registerFullName" id="registerFullName" required>
+                  <label class="form-control-placeholder" for="fullname">FullName
+                    <span style="color: red;" [hidden]="!(hasError('required','FullNameControl'))">*</span></label>
+                  <span toggle="#fullname-field" class=" field-icon toggle-fullname"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                  <input [(ngModel)]="registerUserData.emailid" type="text" class="form-control"
+                    formControlName="EmailIdControl" name="registerEmailId" id="registerEmailId" required>
+                  <label class="form-control-placeholder" for="emailid">EmailId
+                    <span style="color: red;" [hidden]="!(hasError('required','EmailIdControl'))">*</span></label>
+                </div>
+
+                <div class="form-group">
+                  <input [(ngModel)]="registerUserData.password" type="password" class="form-control"
+                    formControlName="PasswordControl" name="registerPassword" id="registerPassword" required>
+                  <label class="form-control-placeholder" for="password">Password
+                    <span style="color: red;" [hidden]="!(hasError('required','PasswordControl'))">*</span></label>
+                  <span toggle="#password-field" class=" field-icon toggle-password"></span>
+                </div>
+
+                <div class="form-group">
+                  <input [(ngModel)]="registerUserData.address" type="address" class="form-control"
+                    formControlName="AddressControl" name="registerAddress" id="registerAddress" required>
+                  <label class="form-control-placeholder" for="address">Address
+                    <span style="color: red;" [hidden]="!(hasError('required','AddressControl'))">*</span></label>
+                  <span toggle="#address-field" class=" field-icon toggle-address"></span>
+                </div>
+                
+                <div class="form-group">
+                  <input [(ngModel)]="registerUserData.phonenumber" type="phonenumber" class="form-control"
+                    formControlName="PhoneNumberControl" name="registerPhoneNumber" id="registerPhoneNumber" required>
+                  <label class="form-control-placeholder" for="phonenumber">PhoneNumber
+                    <span style="color: red;" [hidden]="!(hasError('required','PhoneNumberControl'))"> * </span></label>
+                  <span toggle="#phonenumber-field" class=" field-icon toggle-phonenumber"></span>
+                </div>
+                
+                <div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary rounded submit px-3"
+                    (click)="registerUser()"> Sign In </button>
+                </div>
+                <div class="centered-link mt-3"> <!-- Added margin top -->
+                  <p class="text-center text-muted mb-0">Have already an account? <a href="/login" class="fw-bold text-body"><u>Login here</u></a></p>
+                </div>
+              </form>
+
+
+
+            
+
+        
+      
+              <!-- Background image -->
+
+              <!--Main Navigation-->
+
+
+
+
+
+
+
+              <!-- ------------------------------------------------------------------------------------------ -->
+              <!-- 
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbootstrap.com/img/new/fluid/city/008.jpg');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h1 class="text-uppercase text-center mb-5">Create an account</h1>
+
+              <form>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1cg">Your Name</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div> -->
+
+              <!-- <div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
