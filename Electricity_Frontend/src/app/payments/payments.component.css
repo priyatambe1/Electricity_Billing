@@ -1,0 +1,22 @@
+.payment-history {
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+  
+  .table-bordered th {
+    background-color: #f2f2f2;
+  }
+  

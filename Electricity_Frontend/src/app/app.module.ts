@@ -11,8 +11,27 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from 'src/services/auth.service';
 import { JwtHelperService,JWT_OPTIONS } from '@auth0/angular-jwt';
 import { HomeComponent } from './home/home.component';
-import { CustomerComponent } from './customer/customer.component';
 import { AdminComponent } from './admin/admin.component';
+import { DemoComponent } from './demo/demo.component';
+import { EmptyComponent } from './empty/empty.component';
+import { HomedeshComponent } from './homedesh/homedesh.component';
+import { HomedashboardcardComponent } from './homedashboardcard/homedashboardcard.component';
+import { UserComponent } from './user/user.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HeaderComponent } from './header/header.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { CustomerdashboardComponent } from './customerdashboard/customerdashboard.component';
+import { BillsComponent } from './bills/bills.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { AddBillComponent }  from './addbill/addbill.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CustbillComponent } from './custbill/custbill.component';
+import { CustpaymentComponent } from './custpayment/custpayment.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,8 +41,24 @@ import { AdminComponent } from './admin/admin.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    CustomerComponent,
     AdminComponent,
+    DemoComponent,
+    EmptyComponent,
+    HomedeshComponent,
+    HomedashboardcardComponent,
+    UserComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    HeaderComponent,
+    PrivacyComponent,
+    AdmindashboardComponent,
+    CustomerdashboardComponent,
+    BillsComponent,
+    PaymentsComponent,
+    AddBillComponent,
+    CustbillComponent,
+    CustpaymentComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -31,6 +66,8 @@ import { AdminComponent } from './admin/admin.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    MatSnackBarModule
+    
   ],
   providers: [AuthService,{provide:JWT_OPTIONS,useValue:JWT_OPTIONS},JwtHelperService],
   bootstrap: [AppComponent],

@@ -1,0 +1,15 @@
+.main{
+    background-color: aliceblue;
+    padding-top: 30px;
+}
+.heading{
+    text-align: center;
+    color: red;
+    margin: 2rem;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    width: 100%;
+    margin-top: 110px;
+}

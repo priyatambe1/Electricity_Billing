@@ -1,0 +1,26 @@
+<!-- custpayment.component.html
+<div>
+    <h2>Payments</h2>
+    <ul>
+      <li *ngFor="let payment of payments">
+        {{ payment.paymentid }} - {{ payment.paymentdate | date: 'medium' }} - {{ payment.paymentstatus }}
+      </li>
+    </ul>
+  </div>
+  
+<div>
+    <h2>Add Payment</h2>
+    <form (submit)="addPayment()">
+      <label for="paymentdate">Payment Date:</label>
+      <input type="date" id="paymentdate" [ngModel]="formattedDate(newPayment.paymentdate)" (ngModelChange)="newPayment.paymentdate = $event" name="paymentdate" required>
+  
+      <label for="paymentstatus">Payment Status:</label>
+      <select id="paymentstatus" [(ngModel)]="newPayment.paymentstatus" name="paymentstatus" required>
+        <option value="Paid">Paid</option>
+        <option value="Pending">Pending</option>
+      </select>
+  
+      <button type="submit">Add Payment</button>
+    </form>
+  </div>
+   -->

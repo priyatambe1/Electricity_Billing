@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json.Serialization;
 using Electricity_Billing.Interfaces;
 using Electricity_Billing.Models;
 using Electricity_Billing.ViewModels;
@@ -24,33 +25,42 @@ namespace Electricity_Billing.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthorization();
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddDbContext<ElectricityBillingContext>(options => options.UseNpgsql(Configuration.GetConnectionString("ConnectionString")));           
+            services.AddDbContext<ElectricityBillingContext>(options => options.UseNpgsql(Configuration.GetConnectionString("ConnectionString")));
             services.AddTransient<IJWTMangerRepository, JWTManagerRepository>();
 
-              services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(o =>
-            {
-                var key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
-                o.SaveToken = true;
-                o.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = Configuration["JWT:Issuer"],
-                    ValidAudience = Configuration["JWT:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
-                };
-            });
+            services.AddControllers()
+     .AddJsonOptions(options =>
+     {
+         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+     });
+
+
+
+            services.AddAuthentication(x =>
+          {
+              x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+              x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+          }).AddJwtBearer(o =>
+          {
+              var key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
+              o.SaveToken = true;
+              o.TokenValidationParameters = new TokenValidationParameters
+              {
+                  ValidateIssuer = false,
+                  ValidateAudience = false,
+                  ValidateLifetime = true,
+                  ValidateIssuerSigningKey = true,
+                  ValidIssuer = Configuration["JWT:Issuer"],
+                  ValidAudience = Configuration["JWT:Audience"],
+                  IssuerSigningKey = new SymmetricSecurityKey(key)
+              };
+          });
         }
 
-           
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -58,7 +68,7 @@ namespace Electricity_Billing.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseSwagger();
             app.UseSwaggerUI();
             app.UseHttpsRedirection();

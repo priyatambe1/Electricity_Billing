@@ -1,0 +1,96 @@
+/* Style for bill cards */
+.bill-card {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .card-header h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Style for bill table */
+  .bill-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .bill-table th,
+  .bill-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style for action buttons */
+  .action-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit-button {
+    background-color: #28a745;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  /* Style for form inputs */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 12px;
+  }
+  
+  /* Style for icons */
+  .fa {
+    margin-right: 5px;
+    font-size: 14px; /* Adjust icon size */
+  }
+  /* CSS for Font Awesome icons */
+.fa {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  
+  .fa-pencil-alt,
+  .fa-trash-alt,
+  .fa-save,
+  .fa-times {
+    margin-right: 5px; /* Add some spacing between the icon and text */
+  }
+  .edit-form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add padding for better appearance */
+}
+.alert {
+  background-color: #2dde09;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

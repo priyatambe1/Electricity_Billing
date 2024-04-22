@@ -1,7 +1,61 @@
+
+
 .page-footer {
-  background-color: #333;
+  background-color: #080511;
   color: #fff;
   padding: 20px;
   text-align: center;
   width: 100%;
 }
+
+
+.spacer{
+  flex : 2 2 auto;
+}
+.button:hover{
+  color: yellow;
+}
+
+
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #0e1d34;
+  color: white;
+  padding: 25px 50px;
+  }
+  .remove-bullet{
+  list-style-type: none;
+  padding: 0px;
+  }
+  .logo{
+  font-size: 30px;
+  font-weight: 700;
+  }
+  .logo_text{
+  font-size: 14px;
+  text-align: justify;
+  }
+  .copy_right{
+  text-align: center;
+  }
+  .designed{
+  text-align: center;
+  }
+  
+  .footer ul li{
+  padding: 5px 0;
+  }
+  
+  .footer ul li a{
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+  text-decoration-line: none;
+  }
+  
+  .footer address{
+  line-height: 27px;
+  }

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card payment-history">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="card-title">Customer Payments</h2>
+        </div>
+        <div class="col-md-6 text-right">
+          <button class="button" (click)="backToHome()">Back</button>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Payment ID</th>
+              <th>Bill ID</th>
+              <th>Customer ID</th>
+              <th>Payment Date</th>
+              <th>Payment Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let payment of payments">
+              <td>{{ payment.paymentid }}</td>
+              <td>{{ payment.billid }}</td>
+              <td>{{ payment.id }}</td>
+              <td>{{ payment.paymentdate }}</td>
+              <td>{{ payment.paymentstatus }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

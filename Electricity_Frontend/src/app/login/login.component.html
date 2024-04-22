@@ -29,18 +29,41 @@
               
               <!-- Email input -->
               
-              <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+              <!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
                 <div class="form-outline mb-4">
-                  <input type="emailid" id="emailid" class="form-control" formControlName="emailid" />
+                  <input type="emailid" id="emailid" class="form-control" formControlName="emailid" required />
                   <label class="form-label" for="emailid">Email address</label>
                 </div>
               
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control" formControlName="password" />
+                  <input type="password" id="password" class="form-control" formControlName="password" required />
                   <label class="form-label" for="password">Password</label>
-                </div>
+                </div> -->
+
+                
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                  <div class="form-outline mb-4">
+                    <input type="email" id="emailid" class="form-control" formControlName="emailid" required />
+                    <label class="form-label" for="emailid">Email address</label>
+                    <!-- Display "required" validation message -->
+                    <div *ngIf="loginForm.get('emailid')?.errors?.['required'] && loginForm.get('emailid')?.touched" class="text-danger">
+                      Email address is required.
+                    </div>
+                  </div>
+                
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" class="form-control" formControlName="password" required />
+                    <label class="form-label" for="password">Password</label>
+                    <!-- Display "required" validation message -->
+                    <div *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched" class="text-danger">
+                      Password is required.
+                    </div>
+                  </div>
+
+
+                
                 <div class="centered-link">
-                  <a href="#!">Forgot password?</a>
+                  <!-- <a href="#!">Forgot password?</a> -->
                   </div>
                 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
 

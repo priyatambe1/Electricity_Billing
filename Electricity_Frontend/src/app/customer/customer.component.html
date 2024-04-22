@@ -1,0 +1,31 @@
+<div *ngIf="currentUser">
+    <h2>Welcome, {{ currentUser.fullname }}</h2>
+    <p>Email: {{ currentUser.emailid }}</p>
+    <p>Phone Number: {{ currentUser.phonenumber }}</p>
+    <p>Address: {{ currentUser.address }}</p>
+    
+  
+    <button (click)="editUser()">Edit Details</button>
+  </div>
+  
+  <form *ngIf="editing" (ngSubmit)="saveUser()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="currentUser.emailid" name="email" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="currentUser.password" name="password" required>
+  
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" [(ngModel)]="currentUser.fullname" name="fullname" required>
+  
+    <label for="phonenumber">Phone Number:</label>
+    <input type="tel" id="phonenumber" [(ngModel)]="currentUser.phonenumber" name="phonenumber" required>
+  
+    <label for="address">Address:</label>
+    <input type="text" id="address" [(ngModel)]="currentUser.address" name="address" required>
+  
+    
+  
+    <button type="submit">Save</button>
+  </form>
+  

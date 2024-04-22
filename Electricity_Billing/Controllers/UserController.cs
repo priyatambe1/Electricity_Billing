@@ -1,4 +1,6 @@
 using Electricity_Billing.Models;
+using Electricity_Billing.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -7,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Electricity_Billing.Controllers
 {
+     [Authorize]
+    //  [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -94,6 +98,33 @@ namespace Electricity_Billing.Controllers
 
             return NoContent();
         }
+
+
+        [HttpGet("profile")]
+        public async Task<ActionResult<RegisterViewModel>> GetProfile()
+        {
+            // Retrieve the email of the authenticated user from Claims
+            var userEmail = User.Identity.Name;
+
+            // Fetch user profile details based on the email
+            var user = await _context.Logins.FirstOrDefaultAsync(u => u.Emailid == userEmail);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            // Return profile details to the client
+            var profile = new RegisterViewModel
+            {
+                Emailid = user.Emailid,
+                Fullname = user.Fullname,
+                Address = user.Address,
+                Phonenumber = user.Phonenumber
+            };
+
+            return Ok(profile);
+        }
+
 
         private bool UserExists(int id)
         {

@@ -1,0 +1,71 @@
+<!-- <div>
+  <h2>Bill </h2>
+  <div>
+    <label for="billid">Enter Bill ID:</label>
+    <input type="number" id="billid" name="billid" [(ngModel)]="billid">
+    <button (click)="getBillById()">Fetch Bill</button>
+  </div>
+  <div *ngIf="bill">
+    <table>
+      <tr>
+        <td>
+          <div *ngIf="login">
+            <p>Customer ID: {{ login.id }}</p>
+            <p>Full Name: {{ login.fullname }}</p>
+            <p>Email ID: {{ login.emailid }}</p>
+            <p>Phone Number: {{ login.phonenumber }}</p>
+            <p>Address: {{ login.address }}</p>
+          </div>
+        </td>
+        <td>
+          <div *ngIf="bill">
+            <p>Bill ID: {{ bill.billid }}</p>
+            <p>Bill Generated Date: {{ bill.billgendate }}</p>
+            <p>Per Unit Cost: {{ bill.perunitcost }}</p>
+            <p>Total Units: {{ bill.totalunits }}</p>
+            <p>Bill Amount: {{ bill.billamount }}</p>
+            <p>Bill Due Date: {{ bill.billduedate }}</p>
+            <a [routerLink]="['/custpayment']">See Payment </a>
+            <a (click)="showPaymentAlert()">Pay</a>
+
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div> -->
+
+
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <label for="billid">Enter Bill ID:</label>
+    <input type="number" id="billid" name="billid" [(ngModel)]="billid">&nbsp;
+    <button (click)="getBillById()">Fetch Bill</button>
+      <h2>Bill</h2>
+    </div>
+    <div class="card-body">
+      <div *ngIf="login">
+        <p><strong>Customer ID:</strong> {{ login.id }}</p>
+        <p><strong>Full Name:</strong> {{ login.fullname }}</p>
+        <p><strong>Email ID:</strong> {{ login.emailid }}</p>
+        <p><strong>Phone Number:</strong> {{ login.phonenumber }}</p>
+        <p><strong>Address:</strong> {{ login.address }}</p>
+      </div>
+      <div *ngIf="bill">
+        <p><strong>Bill ID:</strong> {{ bill.billid }}</p>
+        <p><strong>Bill Generated Date:</strong> {{ bill.billgendate }}</p>
+        <p><strong>Per Unit Cost:</strong> {{ bill.perunitcost }}</p>
+        <p><strong>Total Units:</strong> {{ bill.totalunits }}</p>
+        <p><strong>Bill Amount:</strong> {{ bill.billamount }}</p>
+        <p><strong>Bill Due Date:</strong> {{ bill.billduedate }}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button (click)="showPaymentAlert()">Pay</button>&nbsp;
+      <button [routerLink]="['/custpayment']">See Payment </button>
+
+    </div>
+  </div>
+</div>

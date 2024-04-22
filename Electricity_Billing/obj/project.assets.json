@@ -1606,11 +1606,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_Billing\\Electricity_Billing.csproj",
+      "projectUniqueName": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_billing_CaseStudy\\Electricity_Billing\\Electricity_Billing.csproj",
       "projectName": "Electricity_Billing",
-      "projectPath": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_Billing\\Electricity_Billing.csproj",
+      "projectPath": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_billing_CaseStudy\\Electricity_Billing\\Electricity_Billing.csproj",
       "packagesPath": "C:\\Users\\PRIYTAMB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_Billing\\obj\\",
+      "outputPath": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_billing_CaseStudy\\Electricity_Billing\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PRIYTAMB\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1693,7 +1693,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

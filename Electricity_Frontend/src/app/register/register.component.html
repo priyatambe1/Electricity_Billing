@@ -44,12 +44,21 @@
                   <span toggle="#fullname-field" class=" field-icon toggle-fullname"></span>
                 </div>
 
-                <div class="form-group mt-3">
-                  <input [(ngModel)]="registerUserData.emailid" type="text" class="form-control"
+                <!-- <div class="form-group mt-3">
+                  <input [(ngModel)]="registerUserData.emailid" type="email" class="form-control" pattern=".+@example\.com" size="30" 
                     formControlName="EmailIdControl" name="registerEmailId" id="registerEmailId" required>
                   <label class="form-control-placeholder" for="emailid">EmailId
                     <span style="color: red;" [hidden]="!(hasError('required','EmailIdControl'))">*</span></label>
-                </div>
+                </div> -->
+                <div class="form-group mt-3">
+                  <input [(ngModel)]="registerUserData.emailid" type="email" class="form-control"
+                         pattern=".+@example\.com" size="30" 
+                         formControlName="EmailIdControl" name="registerEmailId" id="registerEmailId" required>
+                  <label class="form-control-placeholder" for="emailid">EmailId
+                      <span style="color: red;" [hidden]="!(hasError('required','EmailIdControl'))">*</span>
+                  </label>
+              </div>
+              
 
                 <div class="form-group">
                   <input [(ngModel)]="registerUserData.password" type="password" class="form-control"
@@ -67,13 +76,39 @@
                   <span toggle="#address-field" class=" field-icon toggle-address"></span>
                 </div>
                 
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <input [(ngModel)]="registerUserData.phonenumber" type="phonenumber" class="form-control"
                     formControlName="PhoneNumberControl" name="registerPhoneNumber" id="registerPhoneNumber" required>
                   <label class="form-control-placeholder" for="phonenumber">PhoneNumber
                     <span style="color: red;" [hidden]="!(hasError('required','PhoneNumberControl'))"> * </span></label>
                   <span toggle="#phonenumber-field" class=" field-icon toggle-phonenumber"></span>
-                </div>
+                </div> -->
+                <div class="form-group">
+                  <input [(ngModel)]="registerUserData.phonenumber" type="tel" class="form-control"
+                         pattern="[7-9][0-9]{9}" title="Please enter a 10-digit number starting with 7, 8, or 9" minlength="10" maxlength="10"
+                         formControlName="PhoneNumberControl" name="registerPhoneNumber" id="registerPhoneNumber" required>
+                  <label class="form-control-placeholder" for="phonenumber">PhoneNumber
+                      <span style="color: red;" [hidden]="!(hasError('required','PhoneNumberControl'))"> * </span>
+                  </label>
+                  <span toggle="#phonenumber-field" class="field-icon toggle-phonenumber"></span>
+              </div>
+              
+
+                <!-- <div class="form-group">
+                  <input [(ngModel)]="registerUserData.isadmin" type="isadmin" class="form-control"
+                    formControlName="IsAdminControl" name="registerIsAdmin" id="registerIsAdmin" readonly required>
+                  <label class="form-control-placeholder" for="isadmin">Admin
+                    <span style="color: red;" [hidden]="!(hasError('required','IsAdminControl'))"> * </span></label>
+                  <span toggle="#isadmin-field" class=" field-icon toggle-isadmin"></span>
+                </div> -->
+                <div class="form-group" style="display: none;">
+                  <input [(ngModel)]="registerUserData.isadmin" type="hidden" class="form-control" formControlName="IsAdminControl" name="registerIsAdmin" id="registerIsAdmin" readonly required>
+                  <label class="form-control-placeholder" for="isadmin">Admin <span style="color: red;" [hidden]="!(hasError('required','IsAdminControl'))"> * </span></label>
+                  <span toggle="#isadmin-field" class=" field-icon toggle-isadmin"></span>
+              </div>
+              
+                
+                
                 
                 <div class="form-group">
                   <button type="submit" class="form-control btn btn-primary rounded submit px-3"

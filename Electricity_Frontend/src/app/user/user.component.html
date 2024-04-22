@@ -1,0 +1,76 @@
+<div *ngIf="userProfile">
+  <h2>User Profile</h2>
+  <p>ID: {{ userProfile.id }}</p>
+
+  <p>fullname: {{ userProfile.fullname }}</p>
+  <p>EmailID: {{ userProfile.emailid }}</p>
+  <p>MobileNO: {{ userProfile.phonenumber }}</p>
+  <p>address: {{ userProfile.address }}</p>
+
+
+
+</div>
+
+
+
+<div id="profileImage"></div>
+<span id="fullName">Penny Liu</span>
+<script>
+const fullName = document.getElementById('fullName').textContent;
+const initials = fullName.split(' ').map(name => name[0]).join('').toUpperCase();
+document.getElementById('profileImage').innerHTML = initials;
+</script>
+
+
+<!-- 
+<div class="container">s
+    <h2>Personal Details</h2>
+    <div class="form-group row">
+      <label for="id" class="col-sm-3 col-form-label">Enter Your Consumer ID:</label>
+      <div class="col-sm-6">
+        <input type="number" id="id" [(ngModel)]="id" class="form-control">
+      </div>
+      <div class="col-sm-3">
+        <button (click)="getUser()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+    
+
+    <div *ngIf="user">
+        <div *ngIf="user.fullname" class="alert alert-success">
+          Hi {{ user.fullname }}, You can change your personal details from here.
+        </div>   
+    <div *ngIf="user">
+      <table class="table table-bordered">
+        <tr>
+          <th>Email:</th>
+          <td><input type="email" [(ngModel)]="user.emailid" class="form-control" ></td>
+        </tr>
+        <tr>
+          <th>Full Name:</th>
+          <td><input type="text" [(ngModel)]="user.fullname" class="form-control"></td>
+        </tr>
+        <tr>
+          <th>Phone Number:</th>
+          <td><input type="text" [(ngModel)]="user.phonenumber" class="form-control"></td>
+        </tr>
+        <tr>
+          <th>Address:</th>
+          <td><input type="text" [(ngModel)]="user.address" class="form-control"></td>
+        </tr>
+      </table>
+      <div *ngIf="!showUpdateConfirmation" class="text-center">
+        <button (click)="showUpdateConfirmation = true" class="btn btn-primary">Update Details</button>
+      </div>
+      <div *ngIf="showUpdateConfirmation" class="confirmation text-center">
+        <p>Do you want to update these details?</p>
+        <button (click)="updateUser()" class="btn btn-success">Yes</button>&nbsp;
+        <button (click)="showUpdateConfirmation = false" class="btn btn-danger">No</button>
+       
+      </div>
+      <div *ngIf="updateSuccessMessage" class="alert alert-success text-center">
+        Details updated successfully
+      </div>
+    </div>
+  </div>
+   -->

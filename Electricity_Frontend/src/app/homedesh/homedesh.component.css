@@ -1,0 +1,15 @@
+.box{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.box:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-img-top{
+    transition: transform .2s;
+}
+
+.card-img-top:hover{
+  transform: scale(1.2)
+}

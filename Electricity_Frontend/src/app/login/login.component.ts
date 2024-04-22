@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import necessary form-related modules
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/services/auth.service';
 
 @Component({
@@ -9,17 +9,17 @@ import { AuthService } from 'src/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup; // Define a FormGroup to manage form controls
+  loginForm: FormGroup; 
 
   modelText: string = "";
   modelHeader: string = "";
   showSpinner: boolean = false;
 
   constructor(private _auth: AuthService, private _router: Router, private fb: FormBuilder) {
-    // Initialize the form group and define form controls
+
     this.loginForm = this.fb.group({
-      emailid: ['', [Validators.required, Validators.email]], // Define form control for email with validation
-      password: ['', Validators.required] // Define form control for password with validation
+      emailid: ['', [Validators.required, Validators.email]], 
+      password: ['', Validators.required] 
     });
   }
 
@@ -27,22 +27,27 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    if (this.loginForm.valid) { // Check if the form is valid before attempting to login
+    if (this.loginForm.valid) { 
       this._auth.loginUser(this.loginForm.value).subscribe(
         res => {
           localStorage.setItem('token', res.token);
           if (res.isadmin)
-            this._router.navigate(['/admin']);
+            
+            this._router.navigate(['/admindashboard']);
+            
           else
-            this._router.navigate(['/customer']);
+            this._router.navigate(['/customerdashboard']);
+            alert('Login successful');
+
         },
         err => console.log(err)
+        
       );
     } else {
-      // Handle form validation errors
+      alert('Fields cannot be wrong and blank.');
     }
   }
+ 
 
-  // Convenience getter for easy access to form controls
   get f() { return this.loginForm.controls; }
 }

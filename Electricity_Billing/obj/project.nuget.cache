@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "49YTpe7Gp2aOqA35gV+5pRtOsY/hYo54HuXX8Vj8SGC1Fmu33AZWa0eexhpy/SlISiMF2cmfjtSZ1Iqarbp3IA==",
+  "dgSpecHash": "z2dAytNaN7kVQMTm+G0sUT6BmtZonNLkXtoAeQp5jKCXmJhATPQ8x7KHXzCC34flZumMNpu6hjWCE+26AK2VLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_Billing\\Electricity_Billing.csproj",
+  "projectFilePath": "C:\\Users\\PRIYTAMB\\OneDrive - Capgemini\\BOTP\\Electricity_billing_CaseStudy\\Electricity_Billing\\Electricity_Billing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PRIYTAMB\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\PRIYTAMB\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.0\\microsoft.aspnetcore.authentication.jwtbearer.7.0.0.nupkg.sha512",

@@ -1,0 +1,79 @@
+
+    
+    <!DOCTYPE html>
+    <html>
+        
+        <head>
+            <title>Bootstrap Cards</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+            <!-- bootstrap css -->
+             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        </head>
+        <body> 
+            <!-- <app-header></app-header> -->
+            <section class="masthead bg-light d-flex justify-content-center align-items-center h-100 min-vh-100">
+                <!-- <div class="text-center">
+                    <img src="../assets/Images/loginpng.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="100px" alt="profile">
+                </div> -->
+            <div class="container">
+                <div class="h1 text-center" style="margin-bottom: 5%;" ><b>Customer Dashboard</b>
+                    <button class="btn btn-danger " style="margin-left: 90%;" routerLink="/home">Logout</button>
+                </div>
+                <div class="row gy-3 ">
+                    <div class=" col ">
+                        <div class="box  h-100 d-flex p-4 flex-column text-white" >
+                            <img class="card-img-top" src="../assets/images/Card/c2.jpg" alt="image" height="300px" width="200px">
+                            <div class="card-body"> 
+                                
+                              <!-- <h5 class="card-title text-dark">Customer</h5> -->
+                               <!-- <p class="card-text text-dark"><b>Click here to see your all bills</b></p> -->
+                              <br>
+                              <a routerLink="/user" class="btn btn-info">My Profile</a>
+
+                              <!-- <a (click)="SaveData1(cust.customerId);"  class="btn btn btn-info">My Bills</a> -->
+                             
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class=" col ">
+                        <div class="box  h-100 d-flex p-4 flex-column text-white" >
+                            <img class="card-img-top" src="../assets/images/Card/c1.jpeg" alt="image" height="300px" width="200px">
+                            <div class="card-body">
+                              <!-- <h5 class="card-title">Customer</h5> -->
+                              <!-- <p class="card-text  text-dark"><b>Click here to see your account details</b></p> -->
+                              <br>
+                              <a routerLink="/custbill" class="btn btn-info">My Bills</a>
+
+                              <!-- <a (click)="SaveData2(cust.customerId);"  class="btn btn-info btn-center">My Profile</a> -->
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class=" col ">
+                        <div class="box bg-outline-dark h-100 d-flex p-4 flex-column text-white" >
+                            <img class="card-img-top" src="../assets/images/Card/payment.jpeg" alt="image" height="300px" width="200px">
+                            <div class="card-body">
+                              <!-- <h5 class="card-title">Customer</h5> -->
+                              <!-- <p class="card-text  text-dark"><b>Click here to see your Payment details</b></p> -->
+                              <br>
+                              <a routerLink="/custpayment" class="btn btn-info">My Payments</a>
+
+                              <!-- <a (click)="SaveData(cust.customerId);" class="btn btn-info">My Payment</a> -->
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            
+         </section>
+         <!-- <app-footer></app-footer> -->
+        </body>
+       
+    </html>
+    
+
+    

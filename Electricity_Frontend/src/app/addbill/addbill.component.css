@@ -1,0 +1,52 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .container input[type="date"],
+  .container input[type="number"],
+  .container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .container button[type="submit"],
+  .container .action-button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .container button[type="submit"]:hover,
+  .container .action-button:hover {
+    background-color: #005F6B;
+  }
+  
+  .alert {
+    background-color: #f1f4f5;
+    color: rgb(15, 11, 11);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
